@@ -1,0 +1,25 @@
+/* 基础公共样式: 清除默认样式 + 设置通用样式 */
+* {
+  margin: 0;
+  padding: 0;
+  /* max-width: 100vw; */
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  font:
+    14px/1.5 'Microsoft Yahei',
+    'Hiragino Sans GB',
+    'Heiti SC',
+    'WeQuanYi Micro Hei',
+    sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: aliceblue;
+}
