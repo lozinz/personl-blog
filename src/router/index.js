@@ -19,6 +19,11 @@ const router = createRouter({
           name: 'text',
           component: () => import('../views/TextView.vue'),
         },
+        {
+          path: 'detail',
+          name: 'detail',
+          component: () => import('../views/DetailsView.vue'),
+        },
       ],
     },
   ],

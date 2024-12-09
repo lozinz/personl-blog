@@ -1,12 +1,17 @@
 <script setup>
 import { RouterView, RouterLink } from 'vue-router'
 import { ref } from 'vue'
+
+const props = defineProps({
+  imgurl: String,
+})
+console.log(props.imgurl)
 </script>
 
 <template>
   <div class="bigbox">
-    <img src="../img/home/img.png" alt="" class="image" />
-    <RouterLink class="title">孤独是人生的主旋律</RouterLink>
+    <img src="../img/home/img2.jpg" alt="" class="image" />
+    <RouterLink class="title" to="/detail">孤独是人生的主旋律</RouterLink>
     <div class="content">
       <p>
         致友人和陷入纠结与迷茫的我： 我们曾经一起笑过，一切看起来都那么美好
@@ -15,12 +20,11 @@ import { ref } from 'vue'
     </div>
   </div>
 </template>
-
 <style scoped lang="less">
 .bigbox {
   position: relative;
-  width: 30vw;
-  height: 20vh;
+  width: 35vw;
+  height: 25vh;
   margin: 0 auto;
   border-radius: 2vh;
   overflow: hidden;

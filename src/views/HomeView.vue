@@ -2,12 +2,14 @@
 import { RouterView, RouterLink } from 'vue-router'
 import { onMounted, ref } from 'vue'
 import { testfun } from '@/style/dom/home1'
-import ArtiCle from '@/components/Article.vue'
+import ArtiCle from '@/components/ArtiCle.vue'
 
 onMounted(() => {
   let test = testfun()
   setInterval(test, 200)
 })
+const image = ref()
+image.value = ['../img/home/img.png', '../img/home/img2.jpg']
 </script>
 
 <template>
@@ -23,7 +25,7 @@ onMounted(() => {
   </div>
   <div class="main">
     <h1>Article</h1>
-    <ArtiCle v-for="item in 9" :key="item"></ArtiCle>
+    <ArtiCle v-for="item in 9" :key="item" :imgurl="item"></ArtiCle>
   </div>
 </template>
 
@@ -102,7 +104,7 @@ onMounted(() => {
 
   position: absolute;
   bottom: 0;
-  animation: wave 240s linear infinite;
+  animation: wave 200s linear infinite;
 }
 .banner2 {
   position: absolute;
@@ -114,7 +116,7 @@ onMounted(() => {
   // 溢出
 
   bottom: 0;
-  animation: wave 240s linear infinite;
+  animation: wave 200s linear infinite;
 }
 @keyframes wave {
   100% {
@@ -132,7 +134,7 @@ onMounted(() => {
   height: 400vh;
   background-color: rgba(255, 255, 255, 0.7);
   h1 {
-    width: 30vw;
+    width: 35vw;
     height: 10vh;
     font-size: 1.5vw;
     font-weight: 200;

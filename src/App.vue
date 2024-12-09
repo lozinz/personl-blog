@@ -29,6 +29,7 @@ import '@/style/base.css'
 <style scoped lang="less">
 .main {
   background: url('./img/home/banner.jpg');
+  background-color: rgba(255, 255, 255, 0.7);
   // width: 100vw;
   height: 100%;
   background-size: cover;
@@ -36,8 +37,11 @@ import '@/style/base.css'
   background-repeat: no-repeat;
   background-attachment: fixed; // 背景图片固定
   overflow: hidden;
+  z-index: 50;
+  position: relative;
   .header {
     position: relative;
+    z-index: 999;
     margin: 0 auto;
     top: 2.7778vh;
     padding: 0 1.0417vw;
